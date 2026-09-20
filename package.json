@@ -1,0 +1,12 @@
+{
+  "name": "pj-web",
+  "version": "1.0.0",
+  "description": "Jaga & Pricila Web",
+  "scripts": {
+    "build": "echo Ready",
+    "start": "npx serve ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
