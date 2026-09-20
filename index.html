@@ -1,0 +1,2794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaga ❤️ Pricila — Namma Life Journey 🤍♾️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800;900&family=Dancing+Script:wght@600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,400;1,600&family=Great+Vibes&family=Sacramento&family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --rose-gold: #f4b8ac;
+            --deep-wine: #220417;
+            --romantic-red: #ff2056;
+            --neon-pink: #ff477e;
+            --soft-pink: #ffd9e5;
+            --warm-gold: #f9d371;
+            --bright-gold: #ffeaa7;
+            --dark-silk: #06010a;
+            --card-glass: rgba(22, 5, 24, 0.88);
+            --border-sheen: rgba(249, 211, 113, 0.4);
+            --glow-primary: rgba(255, 32, 86, 0.5);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--dark-silk);
+            font-family: 'Poppins', sans-serif;
+            color: #fff;
+            overflow-x: hidden;
+            min-height: 100vh;
+            cursor: default;
+        }
+
+        /* ── Magic Background Canvas ── */
+        #magicCanvas {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        /* ── Custom Luxury Scrollbar ── */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #08020a; }
+        ::-webkit-scrollbar-thumb { background: linear-gradient(var(--romantic-red), var(--warm-gold)); border-radius: 10px; }
+
+        /* ════════════════════════════════════════════════ */
+        /*          LUXURY ENVELOPE / WELCOME CURTAIN       */
+        /* ════════════════════════════════════════════════ */
+        .welcome-curtain {
+            position: fixed;
+            inset: 0;
+            z-index: 999999;
+            background: radial-gradient(circle at center, #2e041d 0%, #100111 60%, #040005 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            text-align: center;
+            transition: opacity 1s cubic-bezier(0.77, 0, 0.175, 1), transform 1s cubic-bezier(0.77, 0, 0.175, 1);
+        }
+
+        .welcome-curtain.hide {
+            opacity: 0;
+            transform: scale(1.08);
+            pointer-events: none;
+        }
+
+        .welcome-card {
+            background: rgba(26, 4, 24, 0.85);
+            border: 2px solid var(--warm-gold);
+            border-radius: 36px;
+            padding: 50px 36px;
+            max-width: 580px;
+            box-shadow: 0 30px 90px rgba(0,0,0,0.95), 0 0 60px rgba(255, 32, 86, 0.5);
+            backdrop-filter: blur(25px);
+            animation: cardGlow 3s infinite alternate;
+        }
+
+        @keyframes cardGlow {
+            0% { box-shadow: 0 20px 60px rgba(0,0,0,0.9), 0 0 40px rgba(255, 32, 86, 0.3); }
+            100% { box-shadow: 0 30px 90px rgba(0,0,0,0.95), 0 0 70px rgba(249, 211, 113, 0.5); }
+        }
+
+        .welcome-locket {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 20px;
+            border: 3px solid var(--warm-gold);
+            box-shadow: 0 0 40px rgba(255, 32, 86, 0.8);
+            animation: pulse 2s infinite;
+        }
+
+        .welcome-locket img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .welcome-title {
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(2.8rem, 6vw, 4.2rem);
+            color: var(--warm-gold);
+            margin-bottom: 8px;
+            text-shadow: 0 0 25px rgba(249, 211, 113, 0.6);
+        }
+
+        .welcome-sub {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.65rem;
+            color: var(--soft-pink);
+            margin-bottom: 22px;
+        }
+
+        .welcome-msg {
+            font-size: 1.12rem;
+            color: #fff0f5;
+            line-height: 1.9;
+            margin-bottom: 30px;
+        }
+
+        .welcome-enter-btn {
+            background: linear-gradient(135deg, #ff2056, #f9d371);
+            color: #1a0210;
+            border: none;
+            padding: 16px 42px;
+            border-radius: 50px;
+            font-family: 'Cinzel', serif;
+            font-size: 1rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            cursor: pointer;
+            box-shadow: 0 12px 40px rgba(255, 32, 86, 0.7);
+            transition: all 0.35s;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .welcome-enter-btn:hover {
+            transform: translateY(-4px) scale(1.06);
+            box-shadow: 0 18px 55px rgba(255, 32, 86, 0.95);
+        }
+
+        .headphone-tip {
+            margin-top: 20px;
+            font-size: 0.85rem;
+            color: var(--warm-gold);
+            opacity: 0.85;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        /* ── Audio Mood Bar with Animated Equalizer ── */
+        .cinematic-audio-bar {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(18, 4, 18, 0.95);
+            border: 1.5px solid var(--warm-gold);
+            padding: 8px 20px 8px 10px;
+            border-radius: 50px;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.9), 0 0 30px rgba(255, 32, 86, 0.45);
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .cinematic-audio-bar:hover {
+            transform: scale(1.06) translateY(-2px);
+            box-shadow: 0 15px 45px rgba(249, 211, 113, 0.6);
+        }
+
+        .audio-disc {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #ff2056, #f9d371);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            color: #fff;
+            box-shadow: 0 0 20px rgba(255, 32, 86, 0.7);
+        }
+
+        .audio-disc.spinning {
+            animation: spin 3s linear infinite;
+        }
+
+        @keyframes spin { 100% { transform: rotate(360deg); } }
+
+        /* Equalizer visualizer bars */
+        .equalizer {
+            display: flex;
+            align-items: flex-end;
+            gap: 3px;
+            height: 18px;
+            margin-right: 5px;
+        }
+
+        .eq-bar {
+            width: 3px;
+            background: var(--warm-gold);
+            border-radius: 2px;
+            height: 4px;
+            transition: height 0.2s;
+        }
+
+        .playing .eq-bar:nth-child(1) { animation: eqBounce 0.8s ease-in-out infinite alternate; }
+        .playing .eq-bar:nth-child(2) { animation: eqBounce 1.1s ease-in-out infinite alternate 0.2s; }
+        .playing .eq-bar:nth-child(3) { animation: eqBounce 0.7s ease-in-out infinite alternate 0.4s; }
+        .playing .eq-bar:nth-child(4) { animation: eqBounce 0.9s ease-in-out infinite alternate 0.1s; }
+
+        @keyframes eqBounce {
+            0% { height: 4px; }
+            100% { height: 18px; }
+        }
+
+        .audio-title {
+            font-family: 'Cinzel', serif;
+            font-size: 0.82rem;
+            color: var(--warm-gold);
+            letter-spacing: 1.5px;
+            font-weight: 700;
+        }
+
+        .audio-subtitle {
+            font-size: 0.72rem;
+            color: var(--soft-pink);
+            opacity: 0.85;
+        }
+
+        /* ── Top Fixed Luxury Navigation Bar ── */
+        .film-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            backdrop-filter: blur(25px);
+            background: rgba(8, 1, 10, 0.8);
+            border-bottom: 1px solid rgba(249, 211, 113, 0.25);
+            padding: 12px 28px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.4s;
+        }
+
+        .film-header.scrolled {
+            background: rgba(8, 1, 10, 0.96);
+            box-shadow: 0 8px 35px rgba(0,0,0,0.9);
+            padding: 10px 28px;
+        }
+
+        .film-logo {
+            font-family: 'Cinzel', serif;
+            font-size: 1.35rem;
+            letter-spacing: 3px;
+            color: var(--warm-gold);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 800;
+            text-shadow: 0 0 15px rgba(249, 211, 113, 0.4);
+        }
+
+        .film-logo span {
+            color: var(--romantic-red);
+            animation: pulse 1.4s infinite;
+        }
+
+        .header-nav-links {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .header-nav-links a {
+            color: var(--soft-pink);
+            text-decoration: none;
+            font-size: 0.88rem;
+            letter-spacing: 1px;
+            font-weight: 500;
+            transition: color 0.3s, text-shadow 0.3s;
+        }
+
+        .header-nav-links a:hover {
+            color: var(--warm-gold);
+            text-shadow: 0 0 12px rgba(249, 211, 113, 0.8);
+        }
+
+        /* ════════════════════════════════════════════════ */
+        /*    FULL-SCREEN CINEMATIC HERO WITH PHOTO BG     */
+        /* ════════════════════════════════════════════════ */
+        .cinematic-hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 100px 20px 80px;
+            z-index: 3;
+            overflow: hidden;
+        }
+
+        /* Ken Burns animated background photo */
+        .hero-bg-photo {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+
+        .hero-bg-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 22%;
+            animation: kenBurns 25s ease-in-out infinite alternate;
+            filter: brightness(0.42) saturate(1.35);
+        }
+
+        @keyframes kenBurns {
+            0% { transform: scale(1) translateY(0); }
+            50% { transform: scale(1.12) translateX(-2%); }
+            100% { transform: scale(1.08) translateY(-3%); }
+        }
+
+        /* Cinematic overlays */
+        .hero-overlay-gradient {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            background:
+                linear-gradient(180deg, rgba(6, 1, 10, 0.75) 0%, rgba(6, 1, 10, 0.2) 30%, rgba(6, 1, 10, 0.15) 50%, rgba(6, 1, 10, 0.6) 80%, rgba(6, 1, 10, 0.98) 100%),
+                radial-gradient(ellipse at center, transparent 30%, rgba(6, 1, 10, 0.65) 100%);
+        }
+
+        .hero-vignette {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            box-shadow: inset 0 0 160px 60px rgba(0, 0, 0, 0.8);
+            pointer-events: none;
+        }
+
+        .letterbox-top, .letterbox-bottom {
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 40px;
+            background: #000;
+            z-index: 2;
+        }
+        .letterbox-top { top: 0; }
+        .letterbox-bottom { bottom: 0; }
+
+        .hero-light-rays {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            background:
+                radial-gradient(ellipse at 30% 20%, rgba(249, 211, 113, 0.12) 0%, transparent 50%),
+                radial-gradient(ellipse at 70% 80%, rgba(255, 32, 86, 0.08) 0%, transparent 40%);
+            animation: lightRayShift 12s ease-in-out infinite alternate;
+        }
+
+        @keyframes lightRayShift {
+            0% { opacity: 0.6; }
+            50% { opacity: 1; }
+            100% { opacity: 0.7; }
+        }
+
+        .cinematic-hero > *:not(.hero-bg-photo):not(.hero-overlay-gradient):not(.hero-vignette):not(.letterbox-top):not(.letterbox-bottom):not(.hero-light-rays) {
+            position: relative;
+            z-index: 5;
+        }
+
+        /* Jaga's Live Emotional Presence Badge */
+        .presence-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(35, 4, 25, 0.88);
+            border: 1.5px solid var(--romantic-red);
+            color: #fff;
+            padding: 9px 26px;
+            border-radius: 50px;
+            font-size: 0.88rem;
+            letter-spacing: 1.5px;
+            margin-bottom: 18px;
+            box-shadow: 0 0 30px rgba(255, 32, 86, 0.6);
+            animation: presencePulse 2.5s infinite;
+            backdrop-filter: blur(15px);
+        }
+
+        .presence-dot {
+            width: 10px;
+            height: 10px;
+            background: #00ff88;
+            border-radius: 50%;
+            box-shadow: 0 0 12px #00ff88;
+            animation: blink 1.2s infinite;
+        }
+
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+        @keyframes presencePulse {
+            0%, 100% { transform: scale(1); box-shadow: 0 0 25px rgba(255, 32, 86, 0.5); }
+            50% { transform: scale(1.04); box-shadow: 0 0 45px rgba(255, 32, 86, 0.85); }
+        }
+
+        .hero-badge-glow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(0, 0, 0, 0.6);
+            border: 1.5px solid var(--warm-gold);
+            color: var(--bright-gold);
+            padding: 8px 26px;
+            border-radius: 50px;
+            font-family: 'Cinzel', serif;
+            font-size: 0.88rem;
+            letter-spacing: 2.5px;
+            margin-bottom: 22px;
+            box-shadow: 0 0 35px rgba(249, 211, 113, 0.35);
+            animation: badgeShimmer 4s ease-in-out infinite;
+            backdrop-filter: blur(15px);
+        }
+
+        @keyframes badgeShimmer {
+            0%, 100% { box-shadow: 0 0 25px rgba(249, 211, 113, 0.3); border-color: var(--warm-gold); }
+            50% { box-shadow: 0 0 45px rgba(255, 32, 86, 0.6); border-color: var(--romantic-red); }
+        }
+
+        /* Centerpiece Double Heart Locket */
+        .hero-locket {
+            position: relative;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+
+        .locket-ring {
+            width: 135px;
+            height: 135px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid var(--warm-gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 50px rgba(255, 32, 86, 0.6), 0 0 80px rgba(249, 211, 113, 0.3), inset 0 0 25px rgba(249, 211, 113, 0.3);
+            animation: locketPulse 2.5s ease-in-out infinite;
+        }
+
+        .locket-ring img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @keyframes locketPulse {
+            0%, 100% { transform: scale(1); box-shadow: 0 0 50px rgba(255, 32, 86, 0.6), 0 0 80px rgba(249, 211, 113, 0.3); }
+            50% { transform: scale(1.08); box-shadow: 0 0 75px rgba(255, 32, 86, 0.9), 0 0 110px rgba(249, 211, 113, 0.5); }
+        }
+
+        .names-title {
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(4.5rem, 13vw, 10rem);
+            background: linear-gradient(135deg, #ffffff 0%, #ffd9e5 25%, #ff2056 60%, #f9d371 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.08;
+            margin-bottom: 5px;
+            text-shadow: 0 0 60px rgba(255, 32, 86, 0.5);
+            animation: goldShine 6s linear infinite;
+            filter: drop-shadow(0 0 40px rgba(255, 32, 86, 0.4));
+        }
+
+        @keyframes goldShine {
+            0% { background-position: 0% center; }
+            100% { background-position: 200% center; }
+        }
+
+        .soulmates-text {
+            font-family: 'Sacramento', cursive;
+            font-size: clamp(2.2rem, 5.5vw, 4rem);
+            color: var(--soft-pink);
+            margin-bottom: 25px;
+            text-shadow: 0 0 30px rgba(255, 71, 126, 0.6);
+            filter: drop-shadow(0 0 15px rgba(255, 71, 126, 0.3));
+        }
+
+        .soulmates-text span {
+            color: var(--romantic-red);
+            margin: 0 10px;
+            display: inline-block;
+            animation: pulse 1.2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.22); }
+        }
+
+        /* ── Live Journey Timer Cards ── */
+        .journey-timer-box {
+            display: flex;
+            gap: 18px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 35px;
+        }
+
+        .timer-unit {
+            background: rgba(0, 0, 0, 0.65);
+            border: 1.5px solid var(--border-sheen);
+            padding: 16px 24px;
+            border-radius: 22px;
+            text-align: center;
+            min-width: 95px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6), inset 0 0 15px rgba(255, 32, 86, 0.1);
+            backdrop-filter: blur(20px);
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .timer-unit:hover {
+            transform: translateY(-5px);
+            border-color: var(--warm-gold);
+        }
+
+        .timer-num {
+            font-family: 'Cinzel', serif;
+            font-size: 2rem;
+            color: var(--warm-gold);
+            font-weight: 800;
+            display: block;
+            text-shadow: 0 0 15px rgba(249, 211, 113, 0.6);
+        }
+
+        .timer-label {
+            font-size: 0.8rem;
+            color: var(--soft-pink);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .hero-poetic-tanglish {
+            font-size: clamp(1.15rem, 2.3vw, 1.45rem);
+            color: #fff0f5;
+            max-width: 880px;
+            line-height: 2.15;
+            margin: 0 auto 35px;
+            padding: 26px 36px;
+            border-radius: 30px;
+            background: rgba(14, 2, 16, 0.8);
+            border: 1.5px solid rgba(249, 211, 113, 0.35);
+            backdrop-filter: blur(25px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.85), 0 0 35px rgba(255, 32, 86, 0.25);
+            font-weight: 400;
+        }
+
+        .hero-poetic-tanglish .highlight {
+            color: var(--warm-gold);
+            font-weight: 700;
+            text-shadow: 0 0 15px rgba(249, 211, 113, 0.5);
+        }
+
+        .hero-cta-group {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .film-btn {
+            padding: 16px 34px;
+            border-radius: 50px;
+            font-family: 'Cinzel', serif;
+            font-size: 0.92rem;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            border: none;
+        }
+
+        .film-btn-primary {
+            background: linear-gradient(135deg, #ff2056, #f4b8ac);
+            color: #fff;
+            box-shadow: 0 10px 40px rgba(255, 32, 86, 0.65);
+        }
+
+        .film-btn-primary:hover {
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 15px 50px rgba(255, 32, 86, 0.9);
+        }
+
+        .film-btn-gold {
+            background: linear-gradient(135deg, #f9d371, #d49a26);
+            color: #1a0410;
+            box-shadow: 0 10px 35px rgba(249, 211, 113, 0.55);
+        }
+
+        .film-btn-gold:hover {
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 16px 45px rgba(249, 211, 113, 0.8);
+        }
+
+        .film-btn-hug {
+            background: linear-gradient(135deg, #8e0422, #ff477e);
+            color: #fff;
+            box-shadow: 0 10px 35px rgba(255, 71, 126, 0.5);
+            animation: pulseBtn 3s infinite;
+        }
+
+        @keyframes pulseBtn {
+            0%, 100% { box-shadow: 0 10px 30px rgba(255, 71, 126, 0.4); }
+            50% { box-shadow: 0 15px 45px rgba(255, 32, 86, 0.8); }
+        }
+
+        /* ════════════════════════════════════════════════ */
+        /*   LIVE PRESENCE & HEARTBEAT TOUCH PANEL          */
+        /* ════════════════════════════════════════════════ */
+        .live-presence-section {
+            max-width: 960px;
+            margin: -30px auto 70px;
+            padding: 0 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .live-presence-card {
+            background: linear-gradient(145deg, rgba(38, 4, 25, 0.94), rgba(12, 1, 15, 0.96));
+            border: 2px solid var(--warm-gold);
+            border-radius: 36px;
+            padding: 44px 36px;
+            text-align: center;
+            box-shadow: 0 25px 80px rgba(0,0,0,0.9), 0 0 50px rgba(255, 32, 86, 0.35);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .presence-glow-ring {
+            width: 95px;
+            height: 95px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            background: radial-gradient(circle, #ff2056, #3b0213);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 46px;
+            cursor: pointer;
+            box-shadow: 0 0 45px rgba(255, 32, 86, 0.85);
+            animation: heartbeatAnim 1.3s infinite ease-in-out;
+            transition: transform 0.3s;
+        }
+
+        .presence-glow-ring:hover {
+            transform: scale(1.15);
+        }
+
+        @keyframes heartbeatAnim {
+            0% { transform: scale(1); }
+            14% { transform: scale(1.2); }
+            28% { transform: scale(1); }
+            42% { transform: scale(1.15); }
+            70% { transform: scale(1); }
+        }
+
+        .presence-heading {
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(2.6rem, 5vw, 3.8rem);
+            color: var(--warm-gold);
+            margin-bottom: 10px;
+            text-shadow: 0 0 20px rgba(249, 211, 113, 0.5);
+        }
+
+        .presence-tagline {
+            font-size: 1.18rem;
+            color: #fff0f5;
+            line-height: 2.1;
+            max-width: 800px;
+            margin: 0 auto 25px;
+        }
+
+        .heartbeat-btn {
+            background: linear-gradient(135deg, #ff2056, #f9d371);
+            color: #1a0210;
+            border: none;
+            padding: 15px 38px;
+            border-radius: 50px;
+            font-family: 'Cinzel', serif;
+            font-weight: 800;
+            font-size: 0.95rem;
+            letter-spacing: 1.5px;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(255, 32, 86, 0.6);
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .heartbeat-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 15px 45px rgba(255, 32, 86, 0.9);
+        }
+
+        .presence-live-status {
+            margin-top: 22px;
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.55rem;
+            color: var(--soft-pink);
+            min-height: 42px;
+        }
+
+        /* ════════════════════════════════════════════════ */
+        /*      PARALLAX PHOTO DIVIDER SECTIONS            */
+        /* ════════════════════════════════════════════════ */
+        .parallax-divider {
+            position: relative;
+            height: 45vh;
+            min-height: 320px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 3;
+        }
+
+        .parallax-divider .parallax-bg {
+            position: absolute;
+            inset: -20%;
+            z-index: 0;
+        }
+
+        .parallax-divider .parallax-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.35) saturate(1.2) blur(1.5px);
+        }
+
+        .parallax-divider .parallax-overlay {
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(180deg, rgba(6, 1, 10, 0.85) 0%, rgba(6, 1, 10, 0.3) 30%, rgba(6, 1, 10, 0.3) 70%, rgba(6, 1, 10, 0.85) 100%),
+                radial-gradient(ellipse at center, transparent 20%, rgba(0,0,0,0.5) 100%);
+            z-index: 1;
+        }
+
+        .parallax-divider .parallax-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .parallax-quote {
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            color: #fff;
+            text-shadow: 0 4px 40px rgba(0,0,0,0.9), 0 0 60px rgba(255, 32, 86, 0.4);
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+
+        .parallax-sub {
+            font-family: 'Sacramento', cursive;
+            font-size: clamp(1.4rem, 3vw, 2.2rem);
+            color: var(--warm-gold);
+            text-shadow: 0 0 20px rgba(249, 211, 113, 0.5);
+        }
+
+        /* ── Background gradient for non-hero sections ── */
+        .page-bg-section {
+            position: relative;
+            z-index: 3;
+            background:
+                radial-gradient(circle at 50% 0%, #3e0b2a 0%, #150215 45%, #050007 100%);
+        }
+
+        .page-bg-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 85% 40%, rgba(255, 32, 86, 0.08) 0%, transparent 60%),
+                radial-gradient(ellipse at 15% 70%, rgba(249, 211, 113, 0.06) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        /* ── BREATHTAKING ROYAL BOLD OATH BOX ── */
+        .jaga-bold-quote-container {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 85px 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .jaga-bold-quote-card {
+            background: linear-gradient(145deg, rgba(46, 5, 26, 0.96), rgba(16, 2, 18, 0.96));
+            border: 3px solid var(--warm-gold);
+            border-radius: 36px;
+            padding: 50px 40px;
+            text-align: center;
+            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.95), 0 0 60px rgba(249, 211, 113, 0.45);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Shimmering animated light beam border */
+        .jaga-bold-quote-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%; width: 50%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+            transform: skewX(-25deg);
+            animation: beamPass 6s infinite;
+        }
+
+        @keyframes beamPass {
+            0% { left: -100%; }
+            30% { left: 200%; }
+            100% { left: 200%; }
+        }
+
+        .quote-crown {
+            font-size: 42px;
+            margin-bottom: 16px;
+            display: inline-block;
+            filter: drop-shadow(0 0 25px rgba(249, 211, 113, 0.8));
+            animation: pulse 1.5s infinite;
+        }
+
+        .jaga-bold-line {
+            font-size: clamp(1.35rem, 3vw, 1.95rem);
+            font-weight: 800;
+            color: #ffffff;
+            line-height: 2.15;
+            letter-spacing: 0.5px;
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.9);
+        }
+
+        .jaga-bold-line .gold-glow {
+            color: var(--warm-gold);
+            text-shadow: 0 0 30px rgba(249, 211, 113, 0.95);
+            font-weight: 900;
+            display: inline-block;
+        }
+
+        .jaga-bold-line .pink-glow {
+            color: var(--romantic-red);
+            text-shadow: 0 0 30px rgba(255, 32, 86, 0.95);
+            font-weight: 900;
+            display: inline-block;
+        }
+
+        .quote-author-tag {
+            margin-top: 25px;
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.6rem;
+            color: var(--warm-gold);
+            text-shadow: 0 0 25px rgba(249, 211, 113, 0.6);
+        }
+
+        /* ── VINTAGE CHAT STORY CARD (May 26, 7:40 PM) ── */
+        .chat-story-section {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 0 20px 95px;
+            position: relative;
+            z-index: 5;
+        }
+
+        .vintage-chat-card {
+            background: linear-gradient(145deg, #1f0722, #0c020f);
+            border: 2px solid var(--border-sheen);
+            border-radius: 32px;
+            padding: 38px 34px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.85), 0 0 40px rgba(255, 32, 86, 0.2);
+        }
+
+        .chat-header-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 18px;
+            border-bottom: 1px solid rgba(249, 211, 113, 0.2);
+            margin-bottom: 25px;
+        }
+
+        .chat-sender-info {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .avatar-circle {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2px solid var(--warm-gold);
+            box-shadow: 0 0 15px rgba(255, 32, 86, 0.6);
+        }
+
+        .avatar-circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .chat-name {
+            font-family: 'Cinzel', serif;
+            font-size: 1.15rem;
+            color: #fff;
+            font-weight: 700;
+        }
+
+        .chat-status {
+            font-size: 0.82rem;
+            color: #55efc4;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .chat-bubble-incoming {
+            background: rgba(255, 32, 86, 0.18);
+            border: 1px solid rgba(255, 32, 86, 0.4);
+            border-radius: 22px 22px 22px 4px;
+            padding: 18px 28px;
+            max-width: 80%;
+            margin-bottom: 20px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        .chat-msg-text {
+            font-size: 1.45rem;
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .chat-timestamp {
+            font-size: 0.78rem;
+            color: var(--soft-pink);
+            text-align: right;
+            opacity: 0.8;
+        }
+
+        .chat-reflection-box {
+            margin-top: 25px;
+            padding: 24px;
+            background: rgba(249, 211, 113, 0.08);
+            border-left: 4px solid var(--warm-gold);
+            border-radius: 0 22px 22px 0;
+            font-size: 1.15rem;
+            line-height: 2;
+            color: #fff0f5;
+        }
+
+        /* ── INTERACTIVE PHOTO ALBUM (EACH MEMORY A FILM SCENE) ── */
+        .scenes-container {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 0 20px 110px;
+            position: relative;
+            z-index: 5;
+        }
+
+        .sec-eyebrow {
+            font-family: 'Sacramento', cursive;
+            font-size: 2.5rem;
+            color: var(--soft-pink);
+            margin-bottom: 5px;
+            text-align: center;
+        }
+
+        .sec-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.4rem, 5vw, 3.8rem);
+            color: #fff;
+            text-shadow: 0 0 30px rgba(249, 211, 113, 0.4);
+            text-align: center;
+        }
+
+        .sec-sub {
+            font-size: 1.15rem;
+            color: var(--warm-gold);
+            margin-top: 8px;
+            font-weight: 500;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .film-carousel-frame {
+            background: linear-gradient(145deg, #1d061f, #0d0110);
+            border: 2px solid var(--border-sheen);
+            border-radius: 38px;
+            padding: 48px;
+            box-shadow: 0 30px 90px rgba(0, 0, 0, 0.9), 0 0 60px rgba(255, 32, 86, 0.22);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .film-strip-top {
+            position: absolute;
+            top: 0; left: 0; right: 0; height: 6px;
+            background: linear-gradient(90deg, #ff2056, #f9d371, #ff477e, #f9d371, #ff2056);
+        }
+
+        .scene-badge-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 28px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid rgba(249, 211, 113, 0.2);
+        }
+
+        .scene-counter {
+            background: rgba(255, 32, 86, 0.2);
+            border: 1px solid var(--border-sheen);
+            color: var(--soft-pink);
+            padding: 6px 22px;
+            border-radius: 30px;
+            font-family: 'Cinzel', serif;
+            font-size: 0.88rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .scene-slide {
+            display: none;
+            grid-template-columns: 1.15fr 1fr;
+            gap: 48px;
+            align-items: center;
+            animation: fadeInScene 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .scene-slide.active {
+            display: grid;
+        }
+
+        @keyframes fadeInScene {
+            from { opacity: 0; transform: translateY(30px) scale(0.96); }
+            to   { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        .scene-photo-holder {
+            position: relative;
+            border-radius: 28px;
+            overflow: hidden;
+            border: 3px solid var(--border-sheen);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.85);
+            cursor: pointer;
+            background: #000;
+        }
+
+        .scene-photo-holder img {
+            width: 100%;
+            height: 490px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .scene-photo-holder:hover img {
+            transform: scale(1.07);
+        }
+
+        .photo-floating-caption {
+            position: absolute;
+            bottom: 18px; left: 18px; right: 18px;
+            background: rgba(10, 2, 12, 0.88);
+            border: 1px solid rgba(249, 211, 113, 0.4);
+            color: #ffe6ee;
+            padding: 12px 20px;
+            border-radius: 22px;
+            font-size: 0.9rem;
+            backdrop-filter: blur(12px);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .scene-text-side {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .scene-chapter-tag {
+            font-family: 'Sacramento', cursive;
+            font-size: 2.3rem;
+            color: var(--warm-gold);
+            margin-bottom: 6px;
+        }
+
+        .scene-title-heading {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.3rem, 4vw, 3.2rem);
+            color: #fff;
+            margin-bottom: 16px;
+            line-height: 1.25;
+            text-shadow: 0 0 25px rgba(255, 32, 86, 0.35);
+        }
+
+        .scene-tanglish-words {
+            font-size: 1.2rem;
+            color: #fff0f5;
+            line-height: 2.1;
+            margin-bottom: 18px;
+            padding: 20px 26px;
+            background: rgba(255, 32, 86, 0.08);
+            border-left: 4px solid var(--romantic-red);
+            border-radius: 0 22px 22px 0;
+            font-weight: 400;
+        }
+
+        .scene-english-reflection {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.5rem;
+            color: var(--soft-pink);
+            line-height: 1.6;
+            margin-bottom: 18px;
+        }
+
+        .scene-vow-footnote {
+            font-family: 'Cinzel', serif;
+            font-size: 0.85rem;
+            color: var(--warm-gold);
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+        }
+
+        /* ── Slide Navigation Controls ── */
+        .scene-controls {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 38px;
+            padding-top: 25px;
+            border-top: 1px solid rgba(249, 211, 113, 0.2);
+        }
+
+        .ctrl-arrow {
+            background: rgba(255, 32, 86, 0.2);
+            border: 1.5px solid var(--border-sheen);
+            color: #fff;
+            width: 54px; height: 54px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.4rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .ctrl-arrow:hover {
+            background: var(--romantic-red);
+            box-shadow: 0 0 30px rgba(255, 32, 86, 0.8);
+            transform: scale(1.12);
+        }
+
+        .scene-indicators {
+            display: flex;
+            gap: 9px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .ind-dot {
+            width: 13px; height: 13px;
+            border-radius: 50%;
+            background: rgba(249, 211, 113, 0.3);
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .ind-dot.active {
+            background: var(--romantic-red);
+            box-shadow: 0 0 18px var(--romantic-red);
+            width: 34px;
+            border-radius: 12px;
+        }
+
+        /* ── Thumbnail Gallery Strip ── */
+        .thumb-strip-grid {
+            display: grid;
+            grid-template-columns: repeat(9, 1fr);
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        .thumb-item {
+            height: 70px;
+            border-radius: 14px;
+            overflow: hidden;
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: all 0.3s;
+            opacity: 0.6;
+        }
+
+        .thumb-item.active, .thumb-item:hover {
+            border-color: var(--warm-gold);
+            box-shadow: 0 0 15px rgba(249, 211, 113, 0.6);
+            opacity: 1;
+            transform: translateY(-3px);
+        }
+
+        .thumb-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* ── SACRED PROMISES & VOWS (6 PILLARS) ── */
+        .sacred-vows-section {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 0 20px 110px;
+            position: relative;
+            z-index: 5;
+        }
+
+        .vow-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+            gap: 28px;
+        }
+
+        .vow-card {
+            background: linear-gradient(145deg, #1f0723, #0d0111);
+            border: 1.5px solid var(--border-sheen);
+            border-radius: 28px;
+            padding: 38px 28px;
+            text-align: center;
+            transition: all 0.4s;
+            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.65);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .vow-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0; right: 0; height: 3.5px;
+            background: linear-gradient(90deg, transparent, var(--warm-gold), transparent);
+        }
+
+        .vow-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--warm-gold);
+            box-shadow: 0 22px 55px rgba(249, 211, 113, 0.35);
+        }
+
+        .vow-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+            display: inline-block;
+            filter: drop-shadow(0 0 20px rgba(255, 32, 86, 0.6));
+        }
+
+        .vow-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.25rem;
+            color: var(--warm-gold);
+            margin-bottom: 14px;
+            letter-spacing: 1px;
+            font-weight: 800;
+        }
+
+        .vow-tanglish {
+            font-size: 1.05rem;
+            color: #fff0f5;
+            line-height: 1.9;
+        }
+
+        /* ── GRAND PARCHMENT LOVE LETTER ── */
+        .grand-letter-box {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 20px 120px;
+            position: relative;
+            z-index: 5;
+        }
+
+        .parchment-sheet {
+            background: linear-gradient(145deg, #240726, #0e0112);
+            border: 2.5px solid var(--warm-gold);
+            border-radius: 38px;
+            padding: 65px 50px;
+            box-shadow: 0 30px 100px rgba(0, 0, 0, 0.95), 0 0 70px rgba(249, 211, 113, 0.2);
+            position: relative;
+        }
+
+        .wax-seal {
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+            background: radial-gradient(circle, #ff2056, #8e0422);
+            border: 3.5px solid var(--warm-gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 34px;
+            margin: -102px auto 25px;
+            box-shadow: 0 0 40px rgba(255, 32, 86, 0.8);
+            animation: pulse 2s infinite;
+        }
+
+        .letter-header-text {
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(3.2rem, 7vw, 5rem);
+            text-align: center;
+            color: var(--warm-gold);
+            margin-bottom: 5px;
+            text-shadow: 0 0 35px rgba(249, 211, 113, 0.45);
+        }
+
+        .letter-dear-line {
+            font-family: 'Sacramento', cursive;
+            font-size: 2.6rem;
+            text-align: center;
+            color: var(--soft-pink);
+            margin-bottom: 38px;
+        }
+
+        .letter-paragraphs {
+            font-size: 1.18rem;
+            color: #fff2f6;
+            line-height: 2.2;
+            font-weight: 400;
+        }
+
+        .letter-paragraphs p {
+            margin-bottom: 26px;
+            text-align: justify;
+        }
+
+        .highlight-word {
+            color: var(--warm-gold);
+            font-weight: 700;
+            text-shadow: 0 0 10px rgba(249, 211, 113, 0.4);
+        }
+
+        .kisses-burst-banner {
+            background: rgba(255, 32, 86, 0.14);
+            border: 1.5px dashed var(--border-sheen);
+            border-radius: 26px;
+            padding: 26px;
+            text-align: center;
+            margin: 38px 0;
+            color: #ffdce6;
+            line-height: 1.85;
+            font-size: 1.3rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .letter-footer-closing {
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(249, 211, 113, 0.3);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .signature-jaga {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3.4rem;
+            color: var(--warm-gold);
+            text-shadow: 0 0 20px rgba(249, 211, 113, 0.5);
+        }
+
+        .vow-seal-tag {
+            background: rgba(249, 211, 113, 0.14);
+            border: 1.5px solid var(--warm-gold);
+            color: var(--warm-gold);
+            padding: 8px 26px;
+            border-radius: 30px;
+            font-family: 'Cinzel', serif;
+            font-size: 0.88rem;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+
+        /* ── LIGHTBOX ZOOM ── */
+        .lightbox-modal {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 10000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            cursor: zoom-out;
+        }
+
+        .lightbox-modal.show {
+            display: flex;
+            animation: fadeInModal 0.3s ease;
+        }
+
+        @keyframes fadeInModal {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .lightbox-img {
+            max-width: 90vw;
+            max-height: 88vh;
+            border-radius: 22px;
+            border: 3px solid var(--warm-gold);
+            box-shadow: 0 0 80px rgba(255, 32, 86, 0.55);
+            object-fit: contain;
+        }
+
+        /* ── HUG EMBRACE OVERLAY MODAL ── */
+        .hug-modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(18, 1, 12, 0.92);
+            z-index: 10001;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            backdrop-filter: blur(25px);
+        }
+
+        .hug-modal-overlay.show {
+            display: flex;
+            animation: fadeInModal 0.4s ease;
+        }
+
+        .hug-box {
+            background: linear-gradient(145deg, #2a041c, #110114);
+            border: 3px solid var(--warm-gold);
+            border-radius: 36px;
+            padding: 50px 36px;
+            max-width: 600px;
+            text-align: center;
+            box-shadow: 0 25px 90px rgba(255, 32, 86, 0.6);
+            position: relative;
+        }
+
+        .hug-big-icon {
+            font-size: 65px;
+            margin-bottom: 15px;
+            animation: heartbeatAnim 1.2s infinite;
+        }
+
+        .hug-title {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3.4rem;
+            color: var(--warm-gold);
+            margin-bottom: 14px;
+        }
+
+        .hug-text {
+            font-size: 1.2rem;
+            color: #fff0f5;
+            line-height: 2.1;
+            margin-bottom: 30px;
+        }
+
+        .hug-close-btn {
+            background: linear-gradient(135deg, #ff2056, #f9d371);
+            color: #1a0210;
+            border: none;
+            padding: 14px 40px;
+            border-radius: 50px;
+            font-family: 'Cinzel', serif;
+            font-weight: 800;
+            font-size: 1rem;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(255, 32, 86, 0.7);
+        }
+
+        /* ── FLOATING WHISPER TOAST ── */
+        .whisper-toast {
+            position: fixed;
+            bottom: 95px;
+            left: 25px;
+            z-index: 9998;
+            max-width: 380px;
+            background: rgba(22, 3, 20, 0.95);
+            border: 1.5px solid var(--warm-gold);
+            padding: 16px 22px;
+            border-radius: 24px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.9), 0 0 25px rgba(255, 32, 86, 0.4);
+            backdrop-filter: blur(20px);
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transform: translateY(150px);
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .whisper-toast.visible {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .whisper-icon {
+            font-size: 28px;
+            animation: pulse 1.5s infinite;
+        }
+
+        .whisper-content {
+            font-size: 0.9rem;
+            color: #fff2f6;
+            line-height: 1.5;
+        }
+
+        .whisper-author {
+            font-family: 'Sacramento', cursive;
+            font-size: 1.3rem;
+            color: var(--warm-gold);
+            margin-top: 2px;
+        }
+
+        /* ── FOOTER ── */
+        footer {
+            text-align: center;
+            padding: 75px 20px 45px;
+            background: #040006;
+            border-top: 1px solid rgba(249, 211, 113, 0.2);
+            position: relative;
+            z-index: 3;
+        }
+
+        .footer-brand {
+            font-family: 'Cinzel', serif;
+            font-size: 1.9rem;
+            letter-spacing: 4px;
+            color: var(--warm-gold);
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        .footer-tanglish-final {
+            font-size: 1.25rem;
+            color: #ffe6ee;
+            margin-bottom: 12px;
+        }
+
+        .footer-credit {
+            font-size: 0.88rem;
+            color: #9b7183;
+        }
+
+        /* ── Scroll Reveal Animations ── */
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.8s cubic-bezier(0.23, 1, 0.32, 1), transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .reveal-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ── Floating Hearts Layer ── */
+        .floating-hearts-layer {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .float-heart {
+            position: absolute;
+            bottom: -80px;
+            font-size: 20px;
+            opacity: 0;
+            animation: floatUp linear infinite;
+        }
+
+        @keyframes floatUp {
+            0% { transform: translateY(0) rotate(0deg) scale(0.5); opacity: 0; }
+            10% { opacity: 0.7; }
+            90% { opacity: 0.3; }
+            100% { transform: translateY(-110vh) rotate(720deg) scale(1.2); opacity: 0; }
+        }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 860px) {
+            .scene-slide { grid-template-columns: 1fr; }
+            .scene-photo-holder img { height: 380px; }
+            .parchment-sheet { padding: 45px 24px; }
+            .film-header { padding: 10px 16px; }
+            .header-nav-links { display: none; }
+            .parallax-divider { height: 35vh; min-height: 250px; }
+            .letterbox-top, .letterbox-bottom { height: 30px; }
+            .film-carousel-frame { padding: 28px 18px; }
+            .thumb-strip-grid { grid-template-columns: repeat(5, 1fr); }
+            .whisper-toast { left: 15px; right: 15px; max-width: calc(100% - 30px); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ════════════════════════════════════════════════ -->
+    /*     LUXURY WELCOME ENVELOPE / CURTAIN           */
+    <!-- ════════════════════════════════════════════════ -->
+    <div class="welcome-curtain" id="welcomeCurtain">
+        <div class="welcome-card">
+            <div class="welcome-locket">
+                <img src="hero-bg.jpg" alt="Jaga & Pricila">
+            </div>
+            <h1 class="welcome-title">En Anbu Pricila...</h1>
+            <div class="welcome-sub">Jaga-voda Idhaya Koodu 🤍♾️</div>
+            <p class="welcome-msg">
+                "Indha link-a open pannumbodhu... naan un pakkathula ukkandhu un kai viral-a korthu un mela saanjirukura maadhiri feel panni paaru dii en Chellam! En ovvoru thudippum unakku dhaan!" 🥺❤️
+            </p>
+            <button class="welcome-enter-btn" id="enterJourneyBtn">
+                <span>✨ Step Into Jaga's Heart ✨</span>
+            </button>
+            <div class="headphone-tip">
+                <span>🎧</span> Best experienced with sound / headphones on
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Hearts Background Layer -->
+    <div class="floating-hearts-layer" id="floatingHeartsLayer"></div>
+
+    <!-- Magic Particle & Bokeh Canvas -->
+    <canvas id="magicCanvas"></canvas>
+
+    <!-- Floating Whisper Toast (Jaga whispering to Pricila) -->
+    <div class="whisper-toast" id="whisperToast">
+        <div class="whisper-icon">🫂</div>
+        <div>
+            <div class="whisper-content" id="whisperMsg">"Naan un pakkathula dhaan irukken dii ammu... un kaiyya pidichukittu..."</div>
+            <div class="whisper-author">— Un Jaga ❤️</div>
+        </div>
+    </div>
+
+    <!-- Cinematic Audio Mood Bar with Equalizer -->
+    <div class="cinematic-audio-bar" id="audioBarBtn" title="Click to Play Romantic Piano Melody">
+        <div class="audio-disc" id="audioDiscIcon">🎵</div>
+        <div class="equalizer" id="equalizerVisual">
+            <div class="eq-bar"></div>
+            <div class="eq-bar"></div>
+            <div class="eq-bar"></div>
+            <div class="eq-bar"></div>
+        </div>
+        <div class="audio-text">
+            <span class="audio-title">Our Love Melody</span>
+            <span class="audio-subtitle" id="audioStateText">Click to Play Music ✨</span>
+        </div>
+    </div>
+
+    <!-- Top Fixed Luxury Navigation Bar -->
+    <header class="film-header" id="filmHeader">
+        <a href="#hero" class="film-logo">
+            JAGA <span>❤️</span> PRICILA
+        </a>
+        <nav class="header-nav-links">
+            <a href="#presence">Heartbeat</a>
+            <a href="#oath">Sacred Oath</a>
+            <a href="#scenes">Memories</a>
+            <a href="#vows">Promises</a>
+            <a href="#letter">Love Letter</a>
+        </nav>
+    </header>
+
+    <!-- ═══ CINEMATIC HERO BANNER WITH PHOTO BACKGROUND ═══ -->
+    <section class="cinematic-hero" id="hero">
+        <!-- Full-screen couple photo background with Ken Burns -->
+        <div class="hero-bg-photo">
+            <img src="hero-bg.jpg" alt="Jaga & Pricila Together Forever">
+        </div>
+        <div class="hero-overlay-gradient"></div>
+        <div class="hero-vignette"></div>
+        <div class="hero-light-rays"></div>
+        <div class="letterbox-top"></div>
+        <div class="letterbox-bottom"></div>
+
+        <!-- Live Presence Status Pill -->
+        <div class="presence-pill">
+            <span class="presence-dot"></span>
+            <span>JAGA IS RIGHT BESIDE YOU NOW • FEEL HIS HEARTBEAT 🤍</span>
+        </div>
+
+        <div class="hero-badge-glow">
+            ✨ MAY 26 • 7:40 PM — WHERE DESTINY BEGAN ✨
+        </div>
+
+        <div class="hero-locket" id="heroLocket" title="Click for Love Sparks!">
+            <div class="locket-ring">
+                <img src="hero-bg.jpg" alt="Us">
+            </div>
+        </div>
+
+        <h1 class="names-title">Jaga ❤️ Pricila</h1>
+        <div class="soulmates-text">
+            Namma Life Journey <span>🤍</span> Forever & Always ♾️
+        </div>
+
+        <!-- Live Days Together Counter -->
+        <div class="journey-timer-box">
+            <div class="timer-unit">
+                <span class="timer-num" id="daysCount">--</span>
+                <span class="timer-label">Days (Naatkal)</span>
+            </div>
+            <div class="timer-unit">
+                <span class="timer-num" id="hoursCount">--</span>
+                <span class="timer-label">Hours (Mani)</span>
+            </div>
+            <div class="timer-unit">
+                <span class="timer-num" id="minutesCount">--</span>
+                <span class="timer-label">Minutes</span>
+            </div>
+            <div class="timer-unit">
+                <span class="timer-num" id="secondsCount">--</span>
+                <span class="timer-label">Seconds</span>
+            </div>
+        </div>
+
+        <div class="hero-poetic-tanglish">
+            "En life-la naan senja periya punniyam... <span class="highlight">nee enakku pondatiya kedachadhum, namma devadhai namma kaiyila thavazhndhadhum dhaan!</span><br>
+            Indha page-a nee paakumbodhu, <span class="highlight">naan un pakkathula ukkandhu un viral-a korthu un mela saanjirukura maadhiri feel panni paaru dii en Chellam!</span> En ovvoru moochum unakku dhaan! 🥺❤️"
+        </div>
+
+        <div class="hero-cta-group">
+            <button class="film-btn film-btn-hug" id="openHugBtn">
+                <span>🫂 Virtual Tight Hug & Kiss</span>
+            </button>
+            <button class="film-btn film-btn-gold" id="kissShowerBtn">
+                <span>💋 1000 Kisses for Pricila</span>
+            </button>
+            <a href="#letter" class="film-btn" style="background: rgba(255,255,255,0.08); color: var(--rose-gold); border: 1.5px solid var(--border-sheen); backdrop-filter: blur(10px);">
+                <span>💌 Read Jaga's Sacred Letter</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- ═══ PAGE BACKGROUND WRAPPER FOR CONTENT SECTIONS ═══ -->
+    <div class="page-bg-section">
+
+        <!-- ═══ LIVE PRESENCE & HEARTBEAT TOUCH PANEL ═══ -->
+        <div class="live-presence-section reveal-on-scroll" id="presence">
+            <div class="live-presence-card">
+                <div class="presence-glow-ring" id="heartPulseRing" title="Click to Hear Jaga's Heartbeat">
+                    🫀
+                </div>
+                <h3 class="presence-heading">Feel Jaga Right Beside You</h3>
+                <p class="presence-tagline">
+                    "Kan moodi un nenjula kai vei dii ammu... Andha thudippu la un Jaga-voda uyir irukku! Un pakkathula dhaan naan ukkandhurukken... un kannula thuli kanner vandhaalum thodakka naan irukken dii en pondati!" 🥺❤️
+                </p>
+                <button class="heartbeat-btn" id="listenHeartbeatBtn">
+                    <span>💓 Touch to Feel My Heartbeat</span>
+                </button>
+                <div class="presence-live-status" id="heartbeatStatusText">
+                    Touch the heart above to listen to Jaga's live pulse for you ✨
+                </div>
+            </div>
+        </div>
+
+        <!-- ═══ JAGA'S HEARTFELT BOLD OATH (SPECIAL ROYAL GOLD PLAQUE) ═══ -->
+        <div class="jaga-bold-quote-container reveal-on-scroll" id="oath">
+            <div class="jaga-bold-quote-card">
+                <div class="quote-crown">👑 💍 ✨</div>
+                <div class="jaga-bold-line">
+                    "Indha world-la evlo per azhaga irundhaalum, <span class="pink-glow">en kannu Prici-ya mattum dhaan paakanum!</span><br>
+                    Yenna azhaga vechu onnum panna mudiyaadhu ammu... <span class="gold-glow">unna maadhiri oru manasu vera yaarukkum varaadhu dii!</span><br>
+                    Nee dhaan Jaga-ku oru life kudutha ammu... <span class="gold-glow">indha Jaga-ku Prici mattum podhum!</span>" ❤️
+                </div>
+                <div class="quote-author-tag">— Dedicated from Jaga's Deepest Soul to Pricila 🤍♾️</div>
+            </div>
+        </div>
+
+        <!-- ═══ PARALLAX DIVIDER 1 ═══ -->
+        <div class="parallax-divider">
+            <div class="parallax-bg">
+                <img src="photo8.jpg" alt="Lanterns Night">
+            </div>
+            <div class="parallax-overlay"></div>
+            <div class="parallax-content">
+                <div class="parallax-quote">Nee Illama En Life-la Onnum Illa...</div>
+                <div class="parallax-sub">— Un pakkathula naan eppovume irrupen dii ammu ❤️♾️</div>
+            </div>
+        </div>
+
+        <!-- ═══ CHAT STORY: THE MAGIC OF 7:40 PM ═══ -->
+        <section class="chat-story-section reveal-on-scroll" style="padding-top: 85px;">
+            <div class="vintage-chat-card">
+                <div class="chat-header-bar">
+                    <div class="chat-sender-info">
+                        <div class="avatar-circle">
+                            <img src="hero-bg.jpg" alt="Pricila">
+                        </div>
+                        <div>
+                            <div class="chat-name">Pricila 🌸</div>
+                            <div class="chat-status">● Soulmate • Forever Connected</div>
+                        </div>
+                    </div>
+                    <div style="font-family: 'Cinzel', serif; font-size: 0.85rem; color: var(--warm-gold); font-weight: 700;">
+                        MAY 26 • 7:40 PM
+                    </div>
+                </div>
+
+                <div class="chat-bubble-incoming">
+                    <div class="chat-msg-text" id="typewriterText"></div>
+                    <div class="chat-timestamp">7:40 PM • Read with a smiling heart</div>
+                </div>
+
+                <div class="chat-reflection-box">
+                    "Andha naal vandha andha oru chinna 'Hi' evlo ordinary-ah therinjidhu... aana innaiku thirumbi paatha, en life-ku oru precious-aana aala kondu vandha mudhal step adhudhaan! Rendu strangers... daily pesinom, sirichom, purinjikittom... Anaikku aarambicha andha conversation dhaan innaiku 'namma life' nu aana azhagana kadhai! 🤍"
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ PARALLAX DIVIDER 2 ═══ -->
+        <div class="parallax-divider">
+            <div class="parallax-bg">
+                <img src="hero-bg.jpg" alt="Us Together">
+            </div>
+            <div class="parallax-overlay"></div>
+            <div class="parallax-content">
+                <div class="parallax-quote">Un Sirippu Dhaan En Uyir Moochu...</div>
+                <div class="parallax-sub">— Jaga's eternal truth 🤍</div>
+            </div>
+        </div>
+
+        <!-- ═══ INTERACTIVE SCENE BOOK (ALL 9 MEMORY CHAPTERS) ═══ -->
+        <section class="scenes-container reveal-on-scroll" id="scenes" style="padding-top: 85px;">
+            <div class="sec-eyebrow">Chapters of Our Souls</div>
+            <h2 class="sec-title">Ovvoru Page-layum Namma Kaadhal</h2>
+            <div class="sec-sub">Every single photograph holds a sacred piece of our journey 💫</div>
+
+            <div class="film-carousel-frame">
+                <div class="film-strip-top"></div>
+
+                <div class="scene-badge-row">
+                    <div class="scene-counter" id="sceneBadge">
+                        SCENE 1 OF 9 • ETERNAL BOND
+                    </div>
+                    <div style="font-family: 'Sacramento', cursive; font-size: 1.9rem; color: var(--warm-gold);">
+                        Jaga ❤️ Pricila
+                    </div>
+                </div>
+
+                <!-- SCENE 1: Hand Tattoo (Photo 1) -->
+                <div class="scene-slide active" data-scene="1">
+                    <div class="scene-photo-holder" onclick="openLightbox('photo1.jpg')">
+                        <img src="photo1.jpg" alt="Tattoo Hands Jaga & Pricila">
+                        <div class="photo-floating-caption">
+                            <span>✍️</span> En Kaiyil Un Peyar • En Uyiril Un Vaasam
+                        </div>
+                    </div>
+                    <div class="scene-text-side">
+                        <div class="scene-chapter-tag">Chapter 01 • May 26, 7:40 PM</div>
+                        <h3 class="scene-title-heading">Kaiyil Pathinja Kaadhal</h3>
+                        <div class="scene-tanglish-words">
+                            "En kaiyila un peyar mattum illa anbe... en moochula, en idhaya thudippula ezhudhi vaikka pattava nee mattum dhaan! Andha oru 'Hi' la aarambicha namma journey... innaiku rathhamum sadhaiyuma en udamboda kalandhiruchu! ✍️💕"
+                        </div>
+                        <div class="scene-english-reflection">
+                            "Your name is carved not just upon my skin, but deep within my heartbeat forever."
+                        </div>
+                        <div class="scene-vow-footnote">
+                            <span>💍 Hand in hand, soul in soul — until eternity.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SCENE 2: Romantic Night Lanterns (Photo 8) -->
+                <div class="scene-slide" data-scene="2">
+                    <div class="scene-photo-holder" onclick="openLightbox('photo8.jpg')">
+                        <img src="photo8.jpg" alt="Lanterns Romantic Glow">
+                        <div class="photo-floating-caption">
+                            <span>🏮</span> A Thousand Lanterns, One Eternal Light
+                        </div>
+                    </div>
+                    <div class="scene-text-side">
+                        <div class="scene-chapter-tag">Chapter 02 • Kutty Kutty Moments</div>
+                        <h3 class="scene-title-heading">Nee Dhaan En Velicham</h3>
+                        <div class="scene-tanglish-words">
+                            "Vilakkugal aayiram enna suthi erinjaalum... en irunda ulagathukku ore velicham un idhazh sindhura andha oru sirippu dhaan! Oru 'saaptiya?', oru chinna sanda, poi kovam... andha sandaikku pinnaadi irundha care dhaan namma bond-a ivlo azhagaakudhu! 🏮✨"
+                        </div>
+                        <div class="scene-english-reflection">
+                            "In a universe full of glowing stars, your smile is the only light I will ever search for."
+                        </div>
+                        <div class="scene-vow-footnote">
+                            <span>🏮 Imperfect little moments made our love so divine.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SCENE 3: Double Kiss on Mommy (Photo 9) -->
+                <div class="scene-slide" data-scene="3">
+                    <div class="scene-photo-holder" onclick="openLightbox('photo9.jpg')">
+                        <img src="photo9.jpg" alt="Double Kisses on Pricila">
+                        <div class="photo-floating-caption">
+                            <span>💋</span> Loved Unconditionally by Husband & Angel
+                        </div>
+                    </div>
+                    <div class="scene-text-side">
+                        <div class="scene-chapter-tag">Chapter 03 • Queen of Our Home</div>
+                        <h3 class="scene-title-heading">Rendu Pakkamum Anbu Muthangal</h3>
+                        <div class="scene-tanglish-words">
+                            "Appa oru pakkam, namma devadhai marupakkam... unna muthathala nanaikkumbodhu nee kaatura andha vetka sirippu dhaan engaloda sorgam! Naan dhaan un purushan, nee dhaan en pondati! Aayul muzhukka unna raniya thaanguven dii! 😘👑"
+                        </div>
+                        <div class="scene-english-reflection">
+                            "Loved unconditionally from both sides — You are the sweetest queen of our home!"
+                        </div>
+                        <div class="scene-vow-footnote">
+                            <span>💋 1000 sweet kisses sealed with true loyalty.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SCENE 4: Beach Family Day (Photo 5) -->
+                <div class="scene-slide" data-scene="4">
+                    <div class="scene-photo-holder" onclick="openLightbox('photo5.jpg')">
+                        <img src="photo5.jpg" alt="Beach Day Family Joy">
+                        <div class="photo-floating-caption">
+                            <span>🌊</span> Ocean Waves & Smiles
+                        </div>
+                    </div>
+                    <div class="scene-text-side">
+                        <div class="scene-chapter-tag">Chapter 04 • Pure Bliss</div>
+                        <h3 class="scene-title-heading">Kadalora Kaaviyam</h3>
+                        <div class="scene-tanglish-words">
+                            "Kadarkarai kaathu kooda poraama padum... un sirippa paathu! Unnodum, namma kanmaniyodum naan irukura ovvoru nodiyum kaalam appadiye nikkanum! Nee en life-la vandhadhu enakku kedacha romba azhagana blessing dii! 🌊👨‍👩‍👧"
+                        </div>
+                        <div class="scene-english-reflection">
+                            "The beach breeze whispers sweet songs, celebrating the pure magic of our little family."
+                        </div>
+                        <div class="scene-vow-footnote">
+                            <span>🏖️ Sand washes away, but our bond is deeper than the sea.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SCENE 5: Sleeping Peacefully Together (Photo 7) -->
+                <div class="scene-slide" data-scene="5">
+                    <div class="scene-photo-holder" onclick="openLightbox('photo7.jpg')">
+                        <img src="photo7.jpg" alt="Sleeping Peacefully Together">
+                        <div class="photo-floating-caption">
+                            <span>🌙</span> Sacred Silence • Safe in Our Arms
+                        </div>
+                    </div>
+                    <div class="scene-text-side">
+                        <div class="scene-chapter-tag">Chapter 05 • Sacred Peace</div>
+                        <h3 class="scene-title-heading">Urakkathilum Oru Kaadhal</h3>
+                        <div class="scene-tanglish-words">
+                            "Ulagathoda athana sathangalum adangi pogudhu... kan moodi nee thoongura azhagu... namma maarbula namma kanmani thoongura sugam... kadavul kitta naan keka ini edhuvume illa! En motha ulagamum en kaiyyoda saanjirukura andha amaidhi dhaan sorgam! 🌙💤❤️"
+                        </div>
+                        <div class="scene-english-reflection">
+                            "When the world falls asleep, holding you both close is the purest peace I will ever know."
+                        </div>
+                        <div class="scene-vow-footnote">
+                            <span>💤 Resting together in absolute serenity and protection.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SCENE 6: 372 Marks & Studio Family Pride (Photo 6) -->
+                <div class="scene-slide" data-scene="6">
+                    <div class="scene-photo-holder" onclick="openLightbox('photo6.jpg')">
+                        <img src="photo6.jpg" alt="Family Studio Smiling">
+                        <div class="photo-floating-caption">
+                            <span>🌸</span> Proud of My Brilliant Wife
+                        </div>
+                    </div>
+                    <div class="scene-text-side">
+                        <div class="scene-chapter-tag">Chapter 06 • Pure Pride & Joy</div>
+                        <h3 class="scene-title-heading">Eppovume Un Mela Perumai</h3>
+                        <div class="scene-tanglish-words">
+                            "Un 10th standard 372 mark pathi ninaikkumbodhu enakku eppovume proud feeling! Un hard work, dedication ellame paatha romba perumai. Nee life-la innum neraya heights reach pannanum dii. Nee achieve pannumbodhu clap adikkura first person-ah naan eppovume iruppen! 🌸💎"
+                        </div>
+                        <div class="scene-english-reflection">
+                            "Your brilliance and gentle heart inspire me every second of my life."
+                        </div>
+                        <div class="scene-vow-footnote">
+                            <span>💎 Always cheering for your dreams and peace.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SCENE 7: Divine Motherhood in Pink (Photo 3) -->
+                <div class="scene-slide" data-scene="7">
+                    <div class="scene-photo-holder" onclick="openLightbox('photo3.jpg')">
+                        <img src="photo3.jpg" alt="Mom and Daughter in Pink Saree">
+                        <div class="photo-floating-caption">
+                            <span>🤱</span> An Angel in an Angel's Arms
+                        </div>
+                    </div>
+                    <div class="scene-text-side">
+                        <div class="scene-chapter-tag">Chapter 07 • Mother's Grace</div>
+                        <h3 class="scene-title-heading">Thaayin Thooya Paasam</h3>
+                        <div class="scene-tanglish-words">
+                            "Thaayin madiyila oru devadhai... andha devadhaikku uyirana aval en pondati! En Jaga-va nee evlo azhaga paathukitta nu enakku theriyum dii... adhanala dhaan un mela irukura en love-um respect-um innum innum perusa aagite pogudhu! 🤱💖"
+                        </div>
+                        <div class="scene-english-reflection">
+                            "Watching the divine bond between you and our daughter fills my soul with devotion."
+                        </div>
+                        <div class="scene-vow-footnote">
+                            <span>🌸 The most touching sight in the entire universe.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SCENE 8: Playful Kitty Polaroid (Photo 4) -->
+                <div class="scene-slide" data-scene="8">
+                    <div class="scene-photo-holder" onclick="openLightbox('photo4.jpg')">
+                        <img src="photo4.jpg" alt="Playful Polaroid Cheeks">
+                        <div class="photo-floating-caption">
+                            <span>📸</span> Cute Kitty Cheeks • Endless Giggles
+                        </div>
+                    </div>
+                    <div class="scene-text-side">
+                        <div class="scene-chapter-tag">Chapter 08 • Eternal Childlike Joy</div>
+                        <h3 class="scene-title-heading">Mazhalai Konjum Tharunam</h3>
+                        <div class="scene-tanglish-words">
+                            "Un kannathula varanja poonai kodugalum... namma paapa-voda kurumbu sirippum... Innaiku naan unna 'Chellam' nu koopidra maadhiriye future-layum koopidanum! Aayiram varusham vaazhndhaalum salikaadha azhagu un indha kuzhandhaithanam dhaan! 📸😻"
+                        </div>
+                        <div class="scene-english-reflection">
+                            "Your playful laugh turns our ordinary days into sweet timeless memories."
+                        </div>
+                        <div class="scene-vow-footnote">
+                            <span>😻 Timeless joy and pure mischief in a single frame.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SCENE 9: Bedtime Warmth & Old Age Sunset Dream (Photo 2) -->
+                <div class="scene-slide" data-scene="9">
+                    <div class="scene-photo-holder" onclick="openLightbox('photo2.jpg')">
+                        <img src="photo2.jpg" alt="Bedtime Joy Family">
+                        <div class="photo-floating-caption">
+                            <span>🏡</span> Home is Wherever You Are
+                        </div>
+                    </div>
+                    <div class="scene-text-side">
+                        <div class="scene-chapter-tag">Chapter 09 • Sunset Dream</div>
+                        <h3 class="scene-title-heading">Narai Mudi Varai Unnodu</h3>
+                        <div class="scene-tanglish-words">
+                            "Oru naal white hair vandhaalum, life slow aanaalum... Oru sunset evening-la un pakkathula ukkandhu, 'Paathaaya pondati… May 26-la oru simple Hi-la aarambicha namma journey evlo dhooram vandhuduchu' nu sollanum! Andha moment dhaan enakku life-la romba beautiful dream! 🏡❤️♾️"
+                        </div>
+                        <div class="scene-english-reflection">
+                            "From that first 'Hi' to our last sunset, you are my forever story."
+                        </div>
+                        <div class="scene-vow-footnote">
+                            <span>🤍 Jaga + Pricila = An Infinite Bond that time cannot fade.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scene Navigation Controls -->
+                <div class="scene-controls">
+                    <button class="ctrl-arrow" id="scenePrevBtn" title="Previous Memory">❮</button>
+                    <div class="scene-indicators" id="sceneDotsContainer"></div>
+                    <button class="ctrl-arrow" id="sceneNextBtn" title="Next Memory">❯</button>
+                </div>
+
+                <!-- Thumbnail Strip Grid -->
+                <div class="thumb-strip-grid" id="thumbStripGrid">
+                    <div class="thumb-item active" onclick="showScene(0)"><img src="photo1.jpg" alt="1"></div>
+                    <div class="thumb-item" onclick="showScene(1)"><img src="photo8.jpg" alt="2"></div>
+                    <div class="thumb-item" onclick="showScene(2)"><img src="photo9.jpg" alt="3"></div>
+                    <div class="thumb-item" onclick="showScene(3)"><img src="photo5.jpg" alt="4"></div>
+                    <div class="thumb-item" onclick="showScene(4)"><img src="photo7.jpg" alt="5"></div>
+                    <div class="thumb-item" onclick="showScene(5)"><img src="photo6.jpg" alt="6"></div>
+                    <div class="thumb-item" onclick="showScene(6)"><img src="photo3.jpg" alt="7"></div>
+                    <div class="thumb-item" onclick="showScene(7)"><img src="photo4.jpg" alt="8"></div>
+                    <div class="thumb-item" onclick="showScene(8)"><img src="photo2.jpg" alt="9"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ PARALLAX DIVIDER 3 ═══ -->
+        <div class="parallax-divider">
+            <div class="parallax-bg">
+                <img src="photo9.jpg" alt="Family Love">
+            </div>
+            <div class="parallax-overlay"></div>
+            <div class="parallax-content">
+                <div class="parallax-quote">Namma Kaadhal Kadhai Mudiyaadhu...</div>
+                <div class="parallax-sub">— This story has no last page 🤍♾️</div>
+            </div>
+        </div>
+
+        <!-- ═══ SACRED PROMISES & VOWS TO PRICILA ═══ -->
+        <section class="sacred-vows-section reveal-on-scroll" id="vows" style="padding-top: 85px;">
+            <div class="sec-eyebrow">A Husband's Sacred Oath</div>
+            <h2 class="sec-title">En Pondati-kku Jaga-voda 6 Sacred Promises</h2>
+            <div class="sec-sub">Promises written in my soul, guarded by my life 🔒</div>
+
+            <div class="vow-cards-grid">
+                <div class="vow-card">
+                    <span class="vow-icon">💍</span>
+                    <h3 class="vow-title">1. ONLY YOU FOREVER</h3>
+                    <p class="vow-tanglish">
+                        "En amma yaaru nu keta unna solluven, appa yaaru nu keta unna solluven, en pondati yaaru nu keta Pricila dhaan en pondati nu solluven!"
+                    </p>
+                </div>
+
+                <div class="vow-card">
+                    <span class="vow-icon">🛡️</span>
+                    <h3 class="vow-title">2. UNCONDITIONAL LOYALTY</h3>
+                    <p class="vow-tanglish">
+                        "Un mela promise-aa solluren — naan drink panna matten, vera ponna paka matten, pessa matten, thappu panna matten! Unakku unmaiya irrupen dii!"
+                    </p>
+                </div>
+
+                <div class="vow-card">
+                    <span class="vow-icon">🫂</span>
+                    <h3 class="vow-title">3. SAFE IN MY CHEST</h3>
+                    <p class="vow-tanglish">
+                        "Un kannula oru thuli kanner vandhaalum thodakka naan iruppen. Ulagame edhira ninnalum un pakkathula Jaga oru koottaiya iruppan!"
+                    </p>
+                </div>
+
+                <div class="vow-card">
+                    <span class="vow-icon">🌅</span>
+                    <h3 class="vow-title">4. GROWING OLD TOGETHER</h3>
+                    <p class="vow-tanglish">
+                        "Life-oda kadaisi nodi varaikkum un kaiyya vida maaten. Kashtam vandhaalum pesuvom, sanda vandhaalum purinjipom. Unna eppovume raniya paathukkuven!"
+                    </p>
+                </div>
+
+                <div class="vow-card">
+                    <span class="vow-icon">🌸</span>
+                    <h3 class="vow-title">5. PROUD OF YOUR ACHIEVEMENTS</h3>
+                    <p class="vow-tanglish">
+                        "Un 372 mark maadhiri nee reach pannura ovvoru periya height-kum naan un kooda irundhu celebrate pannuven dii!"
+                    </p>
+                </div>
+
+                <div class="vow-card">
+                    <span class="vow-icon">♾️</span>
+                    <h3 class="vow-title">6. INFINITE DESTINY</h3>
+                    <p class="vow-tanglish">
+                        "May 26-la 7:40 PM-ku aarambicha namma kadhai... indha boomiyil namma moochu ulla varai thodarum! Jaga + Pricila Forever!"
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ GRAND PARCHMENT LOVE LETTER (FULL TANGLISH) ═══ -->
+        <section class="grand-letter-box reveal-on-scroll" id="letter">
+            <div class="parchment-sheet">
+                <div class="wax-seal">💌</div>
+                <h2 class="letter-header-text">En Anbu Pricila Pondati-kku...</h2>
+                <div class="letter-dear-line">Jaga-voda Idhayathil Lendhu Ezhudhina Vaazhkai Madal 🤍</div>
+
+                <div class="letter-paragraphs">
+                    <p>
+                        <span class="highlight-word">En Chellam Pricila… 🥺🤍</span> Namma rendu peroda journey-a mudhal naal lendhu ippo varaikkum thirumbi paatha, ovvoru memory-um oru separate chapter maadhiri irukku. En life-la romba precious-aana oru person nee. May 26-la 7:40-ku oru simple "Hi" la aarambicha namma journey, appo namakku theriyama oru naal ivlo periya beautiful life story-a maarum nu. Appo nee enakku oru stranger, naan unakku oru stranger. Oru chinna message, konjam conversation, konjam curiosity, apram daily pesuradhu, random-a sirikkuradhu, chinna chinna vishayam share pannuradhu nu namma bond konjam konjama build aachu. Andha first message appo romba ordinary-ah therinjirukkalam; aana ippo thirumbi paatha, andha oru "Hi" dhaan en life-ku oru romba precious-aana soul-a kondu vandha first step. ❤️
+                    </p>
+
+                    <p>
+                        Konjam konjam pesinom, konjam konjam purinjikittom, konjam konjam trust build pannom. Enakku theriyama nee en daily life-la oru part-a maarita. Morning-la edhavadhu nadandha un kitta sollanum nu thonum; happy-ah irundhaalum share panna thonum; kashtama irundhaalum un kitta pesanum nu thonum. Oru naal pesama irundhaalum edho missing maadhiri feel aaga aarambichadhu. Un presence enakku oru comfort-a maariduchu. Friendship nu aarambicha oru bond, namakku theriyama oru naal heart-ku romba close-aana relationship-a maariduchu. 🤍
+                    </p>
+
+                    <p>
+                        Namma journey-la periya periya moments mattum illa dii; actually namma story-ku real beauty kuduthadhe namma kutty kutty moments dhaan. Oru "saaptiya?", oru "enga irukka?", oru random joke, oru cute fight, apram "seri pesu" nu marubadiyum normal aaguradhu — indha small things dhaan ippo enakku priceless memories. Nee sila neram poi kovapaduva, naan unna kalaaipen; aana rendu perukkum theriyum, andha kovam romba neram irukkaadhu nu. <span class="highlight-word">Namma perfect-ah irundhadhu nala namma story beautiful illa; imperfect moments-aiyum serndhu cross pannadhunaala dhaan namma story beautiful! ❤️</span>
+                    </p>
+
+                    <p>
+                        <span class="highlight-word">May 26 first page-na, September 27 en heart-la oru important chapter.</span> Andha naal lendhu unna friend-ah paatha feeling maariduchu. Un character-a paatha pidichadhu, un heart-a purinjikitta pidichadhu, un smile-a paatha happiness vandhadhu.
+                        <span class="highlight-word">November 18-oda andha call</span> en memory-la innum oru special page. Hours-ah pesinom, sirichom, namma life-la nadandhadhellam share pannom. Un kitta pesumbodhu naan comfortable-ah irundhen.
+                        <span class="highlight-word">January 12…</span> manasula irundha feelings-a un kitta sollanum nu dhairiyam vandha unforgettable naal. Andha naal lendhu namma journey-ku vera oru meaning vandhuduchu.
+                    </p>
+
+                    <p>
+                        <span class="highlight-word">August 9… un special naal.</span> Un kitta pesa midnight 12 varaikkum wait pannina andha excitement, nee happy-ah irundha naanum happy aana feeling eppovume en memory-la irukkum!
+                        Namma first Pongal-um enakku romba special. Sweet Pongal maadhiri nee en life-la sweetness, warmth, happiness kondu vandha. 🌾🤍
+                    </p>
+
+                    <p>
+                        <span class="highlight-word">Un 10th standard 372 mark</span> pathi ninaikkumbodhu enakku eppovume proud feeling. Un hard work, dedication ellame paatha romba perumai. Nee life-la innum neraya heights reach pannanum dii! Un dreams achieve pannumbodhu adha celebrate panna vendiya person-ah naan iruppen!
+                    </p>
+
+                    <div class="kisses-burst-banner">
+                        <p style="margin: 0 0 10px 0; font-weight: 700; color: var(--warm-gold); font-size: 1.35rem;">
+                            Pricila pondati… na dhaan un purusha, nee dhaan en pondati! ❤️
+                        </p>
+                        <p style="margin: 0 0 10px 0;">
+                            Un mela promise-aa solluren — na drink panna matten, vera ponna paka matten, pessa matten, thappu panna matten! Unakku unmaiya irrupen dii! Life long unkuda mattum tha dii irrupen!
+                        </p>
+                        <p style="margin: 0; font-size: 1.55rem; letter-spacing: 2px;">
+                            💋 UMMMMMAAAAAAAAAAA! UMMMMMAAAAAAAAAAA! UMMMMMAAAAAAAAAAA! 💋
+                        </p>
+                    </div>
+
+                    <p>
+                        Ipa kuda en amma yaru keta na unna solluven, en appa yaru nu keta unna solluven, en pondati yaru keta <span class="highlight-word">Pricila dhaan en pondati nu solluven!</span> Na sonna mari life long unkuda mattum tha dii irrupen!
+                        En last aasa enna na dii… en life fulla naan unna en pakkathula paakanum. Kashtam vandhaalum, santhosham vandhaalum first ninaikkura person nee dhaan irukkanum. En Jaga-ku nee kudutha love, care, paasam, understanding ellame enakku romba periya gift.
+                    </p>
+
+                    <!-- JAGA'S BOLD HIGHLIGHT IN LETTER -->
+                    <div style="background: rgba(249, 211, 113, 0.14); border: 2px solid var(--warm-gold); border-radius: 22px; padding: 24px 28px; margin: 32px 0; text-align: center; box-shadow: 0 12px 40px rgba(249, 211, 113, 0.3);">
+                        <p style="font-size: 1.35rem; font-weight: 800; color: #ffffff; line-height: 2.15; margin: 0; text-shadow: 0 0 15px rgba(0,0,0,0.95);">
+                            "<span style="color: var(--romantic-red); text-shadow: 0 0 22px rgba(255, 32, 86, 0.85);">Indha world-la evlo per azhaga irundhaalum, en kannu Prici-ya mattum dhaan paakanum!</span><br>
+                            Yenna azhaga vechu onnum panna mudiyaadhu ammu... <span style="color: var(--warm-gold); text-shadow: 0 0 22px rgba(249, 211, 113, 0.85);">unna maadhiri oru manasu vera yaarukkum varaadhu dii!</span><br>
+                            Nee dhaan Jaga-ku oru life kudutha ammu... <span style="color: var(--warm-gold); text-shadow: 0 0 22px rgba(249, 211, 113, 0.85);">indha Jaga-ku Prici mattum podhum!</span>" ❤️
+                        </p>
+                    </div>
+
+                    <p>
+                        Oru naal white hair vandhaalum, life slow aanaalum, namma heart-la irukkura indha memories fresh-ah irukkanum. Oru sunset evening-la pakkathula ukkandhu, <span class="highlight-word">"Paathaaya pondati… May 26-la oru simple Hi-la aarambicha namma journey evlo dhooram vandhuduchu"</span> nu sollanum. Andha moment dhaan enakku life-la romba beautiful-aana dream. ❤️♾️
+                    </p>
+
+                    <p style="text-align: center; font-size: 1.4rem; color: var(--warm-gold); font-weight: 700; margin-top: 30px;">
+                        En Chellam, en Kutty, en Ponna, en Thangoo, en Pasakari, en Pakki, en Vairam, en Shipi, en Pricila pondati… ❤️♾️
+                    </p>
+                </div>
+
+                <div class="letter-footer-closing">
+                    <div>
+                        <div style="font-size: 0.95rem; color: var(--soft-pink);">Endrendrum Un Moochu Ulla Varai,</div>
+                        <div class="signature-jaga">Un Jaga ❤️</div>
+                    </div>
+                    <div class="vow-seal-tag">
+                        🔒 WRITTEN IN SOUL • KEPT IN LIFE ♾️
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div><!-- end page-bg-section -->
+
+    <!-- ═══ VIRTUAL HUG MODAL ═══ -->
+    <div class="hug-modal-overlay" id="hugModalOverlay">
+        <div class="hug-box">
+            <div class="hug-big-icon">🫂 🤍 💋</div>
+            <h2 class="hug-title">Jaga's Warm Embrace</h2>
+            <p class="hug-text">
+                "Kan moodiko dii en Chella Pakki... Jaga unna tight-aa katti pudichu, un nethila oru anbaana mutham kudukura maadhiri feel panni paaru! Naan un pakkathula dhaan irukken... Endha naalilum, endha soozhlayum un kaiyya naan vida maaten dii en Pondati!" 🥺❤️
+            </p>
+            <button class="hug-close-btn" id="closeHugBtn">
+                <span>🤍 I Feel You, Jaga</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- ═══ FOOTER ═══ -->
+    <footer>
+        <div class="footer-brand">JAGA ❤️ PRICILA</div>
+        <div class="footer-tanglish-final">May 26-la thodangina namma journey... indha ulagam ulla varai azhiyaadhu! 🤍♾️</div>
+        <p class="footer-credit">Created with deep emotion, endless love & sacred memories • Forever Yours</p>
+    </footer>
+
+    <!-- ═══ LIGHTBOX MODAL ═══ -->
+    <div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox()">
+        <img src="" alt="Full Screen Memory" class="lightbox-img" id="lightboxImg">
+    </div>
+
+    <!-- ═══ MAGIC CANVAS, ANIMATIONS & CINEMATIC AUDIO ENGINE ═══ -->
+    <script>
+        // ── WELCOME CURTAIN & AUTOPLAY MUSIC INITIALIZER ──
+        const welcomeCurtain = document.getElementById('welcomeCurtain');
+        const enterBtn = document.getElementById('enterJourneyBtn');
+
+        enterBtn.addEventListener('click', () => {
+            welcomeCurtain.classList.add('hide');
+            // Start audio immediately on user gesture
+            toggleAudio(true);
+        });
+
+        // ── LIVE TOGETHERNESS COUNTER (FROM MAY 26, 7:40 PM) ──
+        const startDate = new Date("May 26, 2023 19:40:00").getTime();
+
+        function updateLiveCounter() {
+            const now = new Date().getTime();
+            const elapsed = now - startDate;
+
+            const days = Math.floor(elapsed / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((elapsed % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((elapsed % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((elapsed % (1000 * 60)) / 1000);
+
+            document.getElementById('daysCount').textContent = days;
+            document.getElementById('hoursCount').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutesCount').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('secondsCount').textContent = seconds.toString().padStart(2, '0');
+        }
+        setInterval(updateLiveCounter, 1000);
+        updateLiveCounter();
+
+        // ── FLOATING WHISPER TOAST MESSAGES ──
+        const whisperMessages = [
+            "Naan un pakkathula dhaan irukken dii ammu... un kaiyya pidichukittu... 🤍",
+            "Un kannula oru thuli kanner vandhaalum en nenju valikkum dii... I'm right here! 🥺❤️",
+            "Indha world-la evlo per irundhaalum... indha Jaga-ku Pricila mattum podhum! 👑",
+            "Kan moodi paaru dii pondati... un nenjula thudikkuradhu en uyir dhaan! 🫀",
+            "Aayul muzhukka unna raniya thaanguven dii... En Chellam! 💎",
+            "Un sirippu dhaan en vaazhkaiyoda ore velicham dii ammu! ✨"
+        ];
+        let whisperIdx = 0;
+        const whisperToast = document.getElementById('whisperToast');
+        const whisperMsgEl = document.getElementById('whisperMsg');
+
+        function showNextWhisper() {
+            whisperMsgEl.textContent = `"${whisperMessages[whisperIdx]}"`;
+            whisperToast.classList.add('visible');
+            setTimeout(() => {
+                whisperToast.classList.remove('visible');
+            }, 6500);
+            whisperIdx = (whisperIdx + 1) % whisperMessages.length;
+        }
+
+        setTimeout(showNextWhisper, 5000);
+        setInterval(showNextWhisper, 15000);
+
+        // ── TYPEWRITER EFFECT FOR CHAT "Hi..." ──
+        const typewriterEl = document.getElementById('typewriterText');
+        const typewriterMessage = '"Hi..."';
+        let twIndex = 0;
+        function typeWrite() {
+            if (twIndex <= typewriterMessage.length) {
+                typewriterEl.textContent = typewriterMessage.substring(0, twIndex);
+                twIndex++;
+                setTimeout(typeWrite, 180 + Math.random() * 200);
+            }
+        }
+        let typewriterStarted = false;
+
+        // ── SCROLL REVEAL OBSERVER ──
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+
+                    if (!typewriterStarted && entry.target.querySelector('.vintage-chat-card')) {
+                        typewriterStarted = true;
+                        setTimeout(typeWrite, 500);
+                    }
+                }
+            });
+        }, { threshold: 0.15 });
+
+        document.querySelectorAll('.reveal-on-scroll').forEach(el => {
+            revealObserver.observe(el);
+        });
+
+        // ── HEADER SCROLL EFFECT ──
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('filmHeader');
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // ── FLOATING HEARTS GENERATOR ──
+        const heartsLayer = document.getElementById('floatingHeartsLayer');
+        const heartEmojis = ['❤️', '🤍', '💕', '💖', '🌸', '✨', '💫'];
+
+        function createFloatingHeart() {
+            const heart = document.createElement('span');
+            heart.className = 'float-heart';
+            heart.textContent = heartEmojis[Math.floor(Math.random() * heartEmojis.length)];
+            heart.style.left = Math.random() * 100 + '%';
+            heart.style.fontSize = (14 + Math.random() * 22) + 'px';
+            heart.style.animationDuration = (8 + Math.random() * 12) + 's';
+            heart.style.animationDelay = Math.random() * 2 + 's';
+            heartsLayer.appendChild(heart);
+
+            setTimeout(() => heart.remove(), 22000);
+        }
+
+        setInterval(createFloatingHeart, 800);
+        for (let i = 0; i < 8; i++) setTimeout(createFloatingHeart, i * 300);
+
+        // ── HIGH-PERFORMANCE MAGIC STARDUST & BOKEH CANVAS ──
+        const canvas = document.getElementById('magicCanvas');
+        const ctx = canvas.getContext('2d');
+        let width = canvas.width = window.innerWidth;
+        let height = canvas.height = window.innerHeight;
+
+        window.addEventListener('resize', () => {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+        });
+
+        const particles = [];
+        const particleCount = 35;
+        const emojis = ['🌸', '✨', '💖', '🤍', '🌹', '💕', '💫'];
+
+        class Particle {
+            constructor() {
+                this.reset();
+            }
+            reset() {
+                this.x = Math.random() * width;
+                this.y = -30;
+                this.size = 14 + Math.random() * 18;
+                this.speedY = 0.6 + Math.random() * 1.5;
+                this.speedX = (Math.random() - 0.5) * 1.2;
+                this.emoji = emojis[Math.floor(Math.random() * emojis.length)];
+                this.opacity = 0.1;
+                this.fadeSpeed = 0.006 + Math.random() * 0.008;
+                this.rotation = Math.random() * 360;
+                this.rotSpeed = (Math.random() - 0.5) * 2;
+            }
+            update() {
+                this.y += this.speedY;
+                this.x += this.speedX;
+                this.rotation += this.rotSpeed;
+
+                if (this.y < height * 0.7) {
+                    if (this.opacity < 0.8) this.opacity += this.fadeSpeed;
+                } else {
+                    this.opacity -= this.fadeSpeed * 1.5;
+                }
+
+                if (this.y > height + 40 || this.opacity <= 0) {
+                    this.reset();
+                }
+            }
+            draw() {
+                ctx.save();
+                ctx.globalAlpha = Math.max(0, this.opacity);
+                ctx.font = `${this.size}px serif`;
+                ctx.translate(this.x, this.y);
+                ctx.rotate((this.rotation * Math.PI) / 180);
+                ctx.fillText(this.emoji, 0, 0);
+                ctx.restore();
+            }
+        }
+
+        for (let i = 0; i < particleCount; i++) {
+            const p = new Particle();
+            p.y = Math.random() * height;
+            particles.push(p);
+        }
+
+        function animateCanvas() {
+            ctx.clearRect(0, 0, width, height);
+            particles.forEach(p => {
+                p.update();
+                p.draw();
+            });
+            requestAnimationFrame(animateCanvas);
+        }
+        animateCanvas();
+
+        // ── PARALLAX SCROLL EFFECT ──
+        window.addEventListener('scroll', () => {
+            document.querySelectorAll('.parallax-bg').forEach(bg => {
+                const rect = bg.parentElement.getBoundingClientRect();
+                const speed = 0.3;
+                const offset = rect.top * speed;
+                bg.style.transform = `translateY(${offset}px)`;
+            });
+        });
+
+        // ── FILM SCENE CAROUSEL & THUMBNAILS ──
+        const slides = document.querySelectorAll('.scene-slide');
+        const dotsContainer = document.getElementById('sceneDotsContainer');
+        const badge = document.getElementById('sceneBadge');
+        const thumbItems = document.querySelectorAll('.thumb-item');
+        let currentScene = 0;
+
+        const sceneNames = [
+            "ETERNAL BOND", "WARM LANTERNS", "QUEEN OF OUR HEARTS",
+            "OCEAN BREEZE", "SACRED PEACE", "PURE PRIDE",
+            "DIVINE MOTHERHOOD", "PLAYFUL SMILES", "SUNSET DREAM"
+        ];
+
+        slides.forEach((_, i) => {
+            const dot = document.createElement('button');
+            dot.classList.add('ind-dot');
+            if (i === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => showScene(i));
+            dotsContainer.appendChild(dot);
+        });
+
+        const dots = document.querySelectorAll('.ind-dot');
+
+        function showScene(idx) {
+            currentScene = (idx + slides.length) % slides.length;
+            slides.forEach((s, i) => s.classList.toggle('active', i === currentScene));
+            dots.forEach((d, i) => d.classList.toggle('active', i === currentScene));
+            thumbItems.forEach((t, i) => t.classList.toggle('active', i === currentScene));
+            badge.textContent = `SCENE ${currentScene + 1} OF ${slides.length} • ${sceneNames[currentScene]}`;
+        }
+
+        document.getElementById('sceneNextBtn').addEventListener('click', () => showScene(currentScene + 1));
+        document.getElementById('scenePrevBtn').addEventListener('click', () => showScene(currentScene - 1));
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') showScene(currentScene + 1);
+            if (e.key === 'ArrowLeft') showScene(currentScene - 1);
+        });
+
+        setInterval(() => showScene(currentScene + 1), 9000);
+
+        // ── 1000 KISSES & HEARTS SHOWER WITH PHYSICS ──
+        document.getElementById('kissShowerBtn').addEventListener('click', (e) => {
+            const kisses = ['💋', '😘', '❤️', '💕', '🥰', '🤍', '🌸', '👑'];
+            const cx = window.innerWidth / 2;
+            const cy = window.innerHeight / 2;
+
+            for (let i = 0; i < 75; i++) {
+                setTimeout(() => {
+                    const el = document.createElement('span');
+                    el.style.position = 'fixed';
+                    el.style.pointerEvents = 'none';
+                    el.style.zIndex = '99999';
+                    el.textContent = kisses[Math.floor(Math.random() * kisses.length)];
+                    el.style.left = cx + 'px';
+                    el.style.top = cy + 'px';
+                    el.style.fontSize = (22 + Math.random() * 34) + 'px';
+                    const angle = Math.random() * Math.PI * 2;
+                    const dist = 90 + Math.random() * 340;
+                    el.style.transition = 'transform 1.5s cubic-bezier(0.15, 0.85, 0.35, 1), opacity 1.5s ease';
+                    document.body.appendChild(el);
+
+                    requestAnimationFrame(() => {
+                        el.style.transform = `translate(${Math.cos(angle) * dist}px, ${Math.sin(angle) * dist}px) scale(0.4)`;
+                        el.style.opacity = '0';
+                    });
+
+                    setTimeout(() => el.remove(), 1600);
+                }, i * 14);
+            }
+
+            const btn = e.currentTarget;
+            const orig = btn.innerHTML;
+            btn.innerHTML = '<span>💋 Ummmmmaaaaa Pricila! 💋</span>';
+            setTimeout(() => { btn.innerHTML = orig; }, 3000);
+        });
+
+        // ── LIGHTBOX ZOOM ──
+        const lightbox = document.getElementById('lightboxModal');
+        const lightboxImg = document.getElementById('lightboxImg');
+
+        function openLightbox(src) {
+            lightboxImg.src = src;
+            lightbox.classList.add('show');
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('show');
+        }
+
+        // ── VIRTUAL HUG MODAL TRIGGER ──
+        const hugModal = document.getElementById('hugModalOverlay');
+        document.getElementById('openHugBtn').addEventListener('click', () => {
+            hugModal.classList.add('show');
+            if (navigator.vibrate) navigator.vibrate([100, 50, 200]);
+        });
+        document.getElementById('closeHugBtn').addEventListener('click', () => {
+            hugModal.classList.remove('show');
+        });
+        hugModal.addEventListener('click', (e) => {
+            if (e.target === hugModal) hugModal.classList.remove('show');
+        });
+
+        // ── CINEMATIC EMOTIONAL PIANO ENGINE WITH EQUALIZER ──
+        let audioCtx, isPlayingAudio = false, pianoTimer = null;
+        const audioBar = document.getElementById('audioBarBtn');
+        const audioDisc = document.getElementById('audioDiscIcon');
+        const audioState = document.getElementById('audioStateText');
+
+        const pianoChords = [
+            [261.63, 329.63, 392.00, 523.25], // C maj
+            [329.63, 392.00, 493.88, 659.25], // E min
+            [349.23, 440.00, 523.25, 698.46], // F maj
+            [392.00, 493.88, 587.33, 783.99], // G maj
+            [220.00, 261.63, 329.63, 440.00], // A min
+            [349.23, 440.00, 523.25, 698.46], // F maj
+            [293.66, 349.23, 440.00, 587.33], // D min
+            [261.63, 329.63, 392.00, 523.25]  // C maj
+        ];
+        let chordIndex = 0;
+        let noteInChord = 0;
+
+        function playGentlePianoNote() {
+            if (!isPlayingAudio) return;
+
+            const currentChord = pianoChords[chordIndex % pianoChords.length];
+            const freq = currentChord[noteInChord % currentChord.length];
+
+            const osc = audioCtx.createOscillator();
+            const gain = audioCtx.createGain();
+
+            osc.type = 'sine';
+            osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+
+            gain.gain.setValueAtTime(0, audioCtx.currentTime);
+            gain.gain.linearRampToValueAtTime(0.08, audioCtx.currentTime + 0.12);
+            gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 1.8);
+
+            osc.connect(gain);
+            gain.connect(audioCtx.destination);
+
+            osc.start();
+            osc.stop(audioCtx.currentTime + 1.85);
+
+            noteInChord++;
+            if (noteInChord >= 4) {
+                noteInChord = 0;
+                chordIndex++;
+            }
+
+            pianoTimer = setTimeout(playGentlePianoNote, 420);
+        }
+
+        function toggleAudio(forcePlay = null) {
+            if (!audioCtx) {
+                audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            }
+
+            const shouldPlay = forcePlay !== null ? forcePlay : !isPlayingAudio;
+
+            if (shouldPlay) {
+                if (audioCtx.state === 'suspended') audioCtx.resume();
+                isPlayingAudio = true;
+                audioDisc.classList.add('spinning');
+                audioBar.classList.add('playing');
+                audioDisc.textContent = '💖';
+                audioState.textContent = 'Playing: Cinematic Love Melody ✨';
+                playGentlePianoNote();
+            } else {
+                isPlayingAudio = false;
+                audioDisc.classList.remove('spinning');
+                audioBar.classList.remove('playing');
+                audioDisc.textContent = '🎵';
+                audioState.textContent = 'Click to Play Music ✨';
+                if (pianoTimer) clearTimeout(pianoTimer);
+            }
+        }
+
+        audioBar.addEventListener('click', () => toggleAudio());
+
+        // ── LIVE HEARTBEAT SOUND SYNTHESIZER ──
+        let isHeartbeatPlaying = false;
+        let heartbeatTimer = null;
+        const heartbeatStatus = document.getElementById('heartbeatStatusText');
+
+        function playHeartbeatThump() {
+            if (!isHeartbeatPlaying) return;
+            if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            if (audioCtx.state === 'suspended') audioCtx.resume();
+
+            // Lub (Low thump)
+            const osc1 = audioCtx.createOscillator();
+            const gain1 = audioCtx.createGain();
+            osc1.type = 'sine';
+            osc1.frequency.setValueAtTime(62, audioCtx.currentTime);
+            osc1.frequency.exponentialRampToValueAtTime(32, audioCtx.currentTime + 0.12);
+            gain1.gain.setValueAtTime(0.35, audioCtx.currentTime);
+            gain1.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.14);
+            osc1.connect(gain1);
+            gain1.connect(audioCtx.destination);
+            osc1.start();
+            osc1.stop(audioCtx.currentTime + 0.15);
+
+            // Dub (Second thump)
+            setTimeout(() => {
+                if (!isHeartbeatPlaying) return;
+                const osc2 = audioCtx.createOscillator();
+                const gain2 = audioCtx.createGain();
+                osc2.type = 'sine';
+                osc2.frequency.setValueAtTime(78, audioCtx.currentTime);
+                osc2.frequency.exponentialRampToValueAtTime(35, audioCtx.currentTime + 0.14);
+                gain2.gain.setValueAtTime(0.28, audioCtx.currentTime);
+                gain2.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.16);
+                osc2.connect(gain2);
+                gain2.connect(audioCtx.destination);
+                osc2.start();
+                osc2.stop(audioCtx.currentTime + 0.17);
+            }, 180);
+
+            if (navigator.vibrate) navigator.vibrate([40, 100, 50]);
+
+            heartbeatTimer = setTimeout(playHeartbeatThump, 950);
+        }
+
+        function toggleHeartbeat() {
+            if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            if (audioCtx.state === 'suspended') audioCtx.resume();
+
+            isHeartbeatPlaying = !isHeartbeatPlaying;
+            if (isHeartbeatPlaying) {
+                heartbeatStatus.innerHTML = '<span style="color: #ff2056;">💓 Lub-Dub... Lub-Dub... Jaga is beating for Pricila right now 🤍</span>';
+                playHeartbeatThump();
+            } else {
+                if (heartbeatTimer) clearTimeout(heartbeatTimer);
+                heartbeatStatus.innerHTML = 'Touch to feel Jaga\'s heartbeat again ✨';
+            }
+        }
+
+        document.getElementById('listenHeartbeatBtn').addEventListener('click', toggleHeartbeat);
+        document.getElementById('heartPulseRing').addEventListener('click', toggleHeartbeat);
+
+        // ── SPARKLE INTERACTIVE LOCKET CLICK ──
+        document.getElementById('heroLocket').addEventListener('click', (e) => {
+            const rect = e.currentTarget.getBoundingClientRect();
+            const cx = rect.left + rect.width / 2;
+            const cy = rect.top + rect.height / 2;
+            const sparks = ['✨', '💎', '💍', '💖', '⭐'];
+
+            for (let i = 0; i < 30; i++) {
+                setTimeout(() => {
+                    const el = document.createElement('span');
+                    el.style.position = 'fixed';
+                    el.style.pointerEvents = 'none';
+                    el.style.zIndex = '99999';
+                    el.textContent = sparks[Math.floor(Math.random() * sparks.length)];
+                    el.style.left = cx + 'px';
+                    el.style.top = cy + 'px';
+                    el.style.fontSize = (16 + Math.random() * 24) + 'px';
+                    const angle = Math.random() * Math.PI * 2;
+                    const dist = 50 + Math.random() * 160;
+                    el.style.transition = 'transform 1s cubic-bezier(0.1, 0.9, 0.3, 1), opacity 1s ease';
+                    document.body.appendChild(el);
+
+                    requestAnimationFrame(() => {
+                        el.style.transform = `translate(${Math.cos(angle) * dist}px, ${Math.sin(angle) * dist}px) scale(0.3)`;
+                        el.style.opacity = '0';
+                    });
+
+                    setTimeout(() => el.remove(), 1100);
+                }, i * 15);
+            }
+        });
+
+        // ── CURSOR TRAIL SPARKLE ──
+        document.addEventListener('mousemove', (e) => {
+            if (Math.random() > 0.85) {
+                const spark = document.createElement('span');
+                spark.textContent = ['✨', '💖', '🤍'][Math.floor(Math.random() * 3)];
+                spark.style.position = 'fixed';
+                spark.style.left = e.clientX + 'px';
+                spark.style.top = e.clientY + 'px';
+                spark.style.pointerEvents = 'none';
+                spark.style.zIndex = '99998';
+                spark.style.fontSize = (10 + Math.random() * 14) + 'px';
+                spark.style.transition = 'transform 0.8s ease, opacity 0.8s ease';
+                document.body.appendChild(spark);
+                requestAnimationFrame(() => {
+                    spark.style.transform = `translateY(-40px) scale(0.3)`;
+                    spark.style.opacity = '0';
+                });
+                setTimeout(() => spark.remove(), 900);
+            }
+        });
+    </script>
+</body>
+</html>
