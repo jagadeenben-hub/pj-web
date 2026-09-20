@@ -1,4 +1,5 @@
 {
-  "buildCommand": "echo Ready",
+  "name": "jpforever",
+  "buildCommand": "echo 'JP Forever Ready'",
   "outputDirectory": "."
 }

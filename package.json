@@ -1,12 +1,15 @@
 {
-  "name": "pj-web",
+  "name": "jpforever",
   "version": "1.0.0",
-  "description": "Jaga & Pricila Web",
+  "description": "JP Forever - Jaga & Pricila Love Journey",
   "scripts": {
-    "build": "echo Ready",
+    "build": "echo 'JP Forever Ready'",
     "start": "npx serve ."
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "jpforever",
+    "love"
+  ],
+  "author": "Jagathish",
   "license": "ISC"
 }
